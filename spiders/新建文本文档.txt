@@ -1,0 +1,30 @@
+#总目录
+https://cookpad.com/category/list
+	
+
+
+	#各个子菜单
+	//div[@class="root_category_title_wrapper"]/h2//@href
+
+
+		#子菜单---本日肉料理以及果子
+		https://cookpad.com/category/177
+			#第一页各个菜谱以及链接
+				#料理名称
+					//div[@class="recipe-preview"]//a[@class="recipe-title font13"]/text()
+				#连接
+					//div[@class="recipe-preview"]//a[@class="recipe-title font13"]/@href[1]
+				#翻页
+					str(https://cookpad.com)+str(//a[@class="next_page"]/@href)	
+
+
+
+				#第一页第一个菜谱
+				https://cookpad.com/recipe/4081124
+					菜谱名：//h1[@class="recipe-title fn clearfix"]/text()
+					材料明：//div[@class="ingredient_name"]//text()
+					数量：//div[@class="ingredient_quantity amount"]//text()
+					试做数量：////li[@id="tsukurepo_tab"]//span[@class="count"]/text()
+					评论数量：//li[@id="comment_tab"]//span[@class="count"]/text()
+
+			
